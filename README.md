@@ -16,5 +16,6 @@
 # 2272037 - Rasyaad Hildebrand Gunawan
 - Polling System ( Done )
 - CRUD Fakultas
+- CRUD Polling
 - Add Detail UI/UX
 - https://github.com/Ben-wijaya/Courses_Polling/tree/polling_course_draft
