@@ -1,12 +1,12 @@
 # Courses_Polling
 
-# 2272018 - Nathanael Kanaya Chriesman
+# <a href="https://github.com/Ben-wijaya/Courses_Polling/tree/pwlnathanael">2272018 - Nathanael Kanaya Chriesman</a>
 - CRUD Program Studi
 - CRUD Mata Kuliah
 - ERD & Data Dummy
-- https://github.com/Ben-wijaya/Courses_Polling/tree/pwlnathanae
+- https://github.com/Ben-wijaya/Courses_Polling/tree/pwlnathanael
 
-# 2272022 - Benedict Wijaya
+# <a href="https://github.com/Ben-wijaya/Courses_Polling/tree/admin_page">2272022 - Benedict Wijaya</a>
 - Login & Logout System
 - Pembagian page untuk user dengan berbeda role
 - CRUD User
