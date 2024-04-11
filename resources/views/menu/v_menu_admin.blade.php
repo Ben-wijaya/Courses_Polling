@@ -3,8 +3,9 @@
     <div class="brand flex-column-auto" id="kt_brand">
         <!--begin::Logo-->
         <a href="#" class="brand-logo">
-            {{-- <img alt="Logo" src="{{asset('metch')}}/media/logos/logo-light.png" /> --}}
-            <span class="text-center"><i class="fab fa-angrycreative fa-4x"></i></span>
+{{--             <img alt="Logo" src="{{asset('metch')}}/media/logos/logo-light.png" /> --}}
+{{--            <span class="text-center"><i class="fab fa-angrycreative fa-4x"></i></span>--}}
+            Courses Polling
         </a>
         <!--end::Logo-->
         <!--begin::Toggle-->
@@ -67,7 +68,7 @@
                         <i class="menu-arrow"></i>
                     </a>
                     <div class="menu-submenu">
-        
+
                         <ul class="menu-subnav">
                             <li class="menu-item menu-item-parent" aria-haspopup="true">
                                 <span class="menu-link">
@@ -83,24 +84,24 @@
                                     <span class="menu-label">
                                         <span class="label label-rounded label-primary"><?= $count_user ?></span>
                                     </span>
-                                    
+
                                 </a>
-                                
+
                             </li>
-                    
+
                         </ul>
                     </div>
                 </li>
-            
+
                 <li class="menu-item" aria-haspopup="true">
                     <a href="#" class="menu-link">
                         <span class="menu-icon fas fa-cog">
-                           
+
                         </span>
                         <span class="menu-text">App Settings</span>
                     </a>
-                </li>	
-            
+                </li>
+
             </ul>
             <!--end::Menu Nav-->
         </div>

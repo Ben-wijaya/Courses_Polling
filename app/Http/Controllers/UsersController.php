@@ -7,6 +7,7 @@ use DataTables;
 use App\Models\User;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use App\Models\Role;
 
 
 class UsersController extends Controller
@@ -14,7 +15,7 @@ class UsersController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
-    } 
+    }
 
     public function index(Request $request)
     {
@@ -26,14 +27,14 @@ class UsersController extends Controller
         ];
 
         if ($request->ajax()) {
-            $q_user = User::select('*')->where('level','!=', 0)->orderByDesc('created_at');
+            $q_user = User::select('*')->where('role_id','!=', 0)->orderByDesc('created_at');
             return Datatables::of($q_user)
                     ->addIndexColumn()
                     ->addColumn('action', function($row){
-     
+
                         $btn = '<div data-toggle="tooltip"  data-id="'.$row->id.'" data-original-title="Edit" class="btn btn-sm btn-icon btn-outline-success btn-circle mr-2 edit editUser"><i class=" fi-rr-edit"></i></div>';
                         $btn = $btn.' <div data-toggle="tooltip"  data-id="'.$row->id.'" data-original-title="Delete" class="btn btn-sm btn-icon btn-outline-danger btn-circle mr-2 deleteUser"><i class="fi-rr-trash"></i></div>';
- 
+
                          return $btn;
                     })
                     ->rawColumns(['action'])
@@ -54,9 +55,9 @@ class UsersController extends Controller
                 [
                  'name' => $request->name,
                  'email' => $request->email,
-                 'level' => $request->level,
+//                 'role_id' => $request->role_id,
                  'password' => Hash::make($request->password),
-                ]);        
+                ]);
 
         return response()->json(['success'=>'User saved successfully!']);
     }
@@ -83,5 +84,13 @@ class UsersController extends Controller
         User::find($id)->delete();
 
         return response()->json(['success'=>'Customer deleted!']);
+    }
+
+    public function roleUsers(Role $id, Request $request)
+    {
+        $role = Role::findOrFail($id);
+        $users = $role->users()->paginate(10);
+
+        return view('dashboard', compact('role', 'users'));
     }
 }

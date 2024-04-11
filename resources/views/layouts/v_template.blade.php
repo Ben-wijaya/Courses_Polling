@@ -81,10 +81,10 @@
     <!--begin::Header Mobile-->
     <div id="kt_header_mobile" class="header-mobile align-items-center header-mobile-fixed">
         <!--begin::Logo-->
-        <a href="#">
-            {{-- <img alt="Logo" src="{{asset('metch')}}/media/logos/logo-light.png" /> --}}
-            <div class="text-white"><i class="fab fa-angrycreative fa-4x"></i></div>
-        </a>
+{{--        <a href="#">--}}
+{{--            --}}{{-- <img alt="Logo" src="{{asset('metch')}}/media/logos/logo-light.png" /> --}}
+{{--            <div class="text-white"><i class="fab fa-angrycreative fa-4x"></i></div>--}}
+{{--        </a>--}}
         <!--end::Logo-->
         <!--begin::Toolbar-->
         <div class="d-flex align-items-center">
@@ -177,7 +177,7 @@
                         <!--begin::Copyright-->
                         <div class="text-dark order-2 order-md-1">
                             <span class="text-muted font-weight-bold mr-2">© <?= date('Y'); ?></span>
-                            <a href="#" class="text-dark-75 text-hover-primary">Ory Fikry | BoilerPlate</a>
+                            <a href="#" class="text-dark-75 text-hover-primary">Course Polling | Dundun Family</a>
                         </div>
                         <!--end::Copyright-->
                     </div>

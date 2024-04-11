@@ -16,7 +16,7 @@
                                     {{-- <th>No.</th> --}}
                                     <th>Name</th>
                                     <th>Email</th>
-                                    <th>Level</th>
+                                    <th>Role_id</th>
                                     <th style="width:90px;">Action</th>
                                 </tr>
                             </thead>
@@ -59,10 +59,10 @@
 
                         <input type="text" name="name" class="form-control" id="name" placeholder="Nama"><br>
                         <input type="email" name="email" class="form-control" id="email" placeholder="email"><br>
-                        <select name="level" class="form-control" id="level">
-                            <option value="-">Pilih Level</option>
-                            <option value="1">Operator</option>
-                            <option value="2">Member</option>
+                        <select name="role_id" class="form-control" id="role_id">
+                            <option value="1">Admin</option>
+                            <option value="2">Program Studi</option>
+                            <option value="3">Mahasiswa</option>
                         </select><br>
                         <input type="text" name="password" class="form-control" placeholder="password"><br>
                         <input type="hidden" name="user_id" id="user_id" value="">
@@ -120,8 +120,8 @@
                     name: 'email'
                 },
                 {
-                    data: 'level',
-                    name: 'level'
+                    data: 'role_id',
+                    name: 'role_id'
                 },
                 {
                     data: 'action',
@@ -131,7 +131,7 @@
                 },
             ]
         });
-        
+
         // csrf token
         $.ajaxSetup({
             headers: {
@@ -154,7 +154,7 @@
                 $('#user_id').val(data.id);
                 $('#name').val(data.name);
                 $('#email').val(data.email);
-                $('#level').val(data.level);
+                $('#role_id').val(data.role_id);
             })
         });
         // initialize btn save

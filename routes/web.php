@@ -26,6 +26,7 @@ Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/user', [UserController::class, 'index'])->name('user.index');
+Route::get('/content/view_dashboard', [UsersController::class, 'roleUsers'])->name('dashboard');
 
 // Route::get('/user.get_data',[UserController::class, 'get_data'])->name('get_data');
 Route::resource('users', UsersController::class);
